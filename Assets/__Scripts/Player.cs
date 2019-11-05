@@ -61,10 +61,6 @@ public class Player {
         // startRot is the rotation about Z of the first card
         float startRot = 0;
         startRot = handSlotDef.rot;
-        if(hand.Count > 1)
-        {
-            startRot += Bartok.S.handFanDegrees * (hand.Count - 1) / 2;
-        }
 
         // Move all the cards to their new positions
         Vector3 pos;
@@ -72,8 +68,7 @@ public class Player {
         Quaternion rotQ;
         for (int i=0; i<hand.Count; i++)
         {
-            rot = startRot - Bartok.S.handFanDegrees * i;
-            rotQ = Quaternion.Euler(0, 0, rot);
+            rotQ = Quaternion.Euler(0, 0, 0);
 
             pos = Vector3.up * CardBartok.CARD_HEIGHT / 2f;
 
@@ -83,6 +78,7 @@ public class Player {
             // bottom-center of the fan of the cards)
             pos += handSlotDef.pos;
             pos.z = -0.5f * i;
+            pos.x = -0.5 * i;
 
             // If not the initial deal, start moving the card immediately.
             if(Bartok.S.phase != TurnPhase.idle)

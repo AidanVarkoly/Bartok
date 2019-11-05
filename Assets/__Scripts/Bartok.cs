@@ -20,7 +20,6 @@ public class Bartok : MonoBehaviour {
     public TextAsset deckXML;
     public TextAsset layoutXML;
     public Vector3 layoutCenter = Vector3.zero;
-    public float handFanDegrees = 10f;
     public int numStartingCards = 7;
     public float drawTimeStagger = 0.1f;
 
