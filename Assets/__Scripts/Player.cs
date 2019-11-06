@@ -78,7 +78,7 @@ public class Player {
             // bottom-center of the fan of the cards)
             pos += handSlotDef.pos;
             pos.z = -0.5f * i;
-            pos.x = -0.5 * i;
+            pos.x = -0.5f * i;
 
             // If not the initial deal, start moving the card immediately.
             if(Bartok.S.phase != TurnPhase.idle)
