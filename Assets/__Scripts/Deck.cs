@@ -63,14 +63,6 @@ public class Deck : MonoBehaviour {
 	{
 		xmlr = new PT_XMLReader ();
 		xmlr.Parse (deckXMLText);
-
-		// print a test line
-		string s = "xml[0] decorator [0] ";
-		s += "type=" + xmlr.xml ["xml"] [0] ["decorator"] [0].att ("type");
-		s += " x=" + xmlr.xml ["xml"] [0] ["decorator"] [0].att ("x");
-		s += " y=" + xmlr.xml ["xml"] [0] ["decorator"] [0].att ("y");
-		s += " scale=" + xmlr.xml ["xml"] [0] ["decorator"] [0].att ("scale");
-		print (s);
 		
 		//Read decorators for all cards
 		// these are the small numbers/suits in the corners
