@@ -21,7 +21,7 @@ public class Bartok : MonoBehaviour {
     public TextAsset layoutXML;
     public Vector3 layoutCenter = Vector3.zero;
     public float handFanDegrees = 10f;
-    public int numStartingCards = 7;
+    public int numStartingCards = 4;
     public float drawTimeStagger = 0.1f;
 
     [Header("Set Dynamically")]
